@@ -1,0 +1,33 @@
+.mainCartcontainer{
+    height: 93%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+.cart{
+    height: 500px;
+    width: 400px;
+    box-shadow: 0 0 10px black;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart button{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    color: lightblue;
+    border: 2px solid lightblue;
+    height: 8%;
+    font-weight: bolder;
+}
+
+.cart img{
+    height: 70%;
+    width: 100%;
+}

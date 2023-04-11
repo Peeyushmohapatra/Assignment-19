@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Nav from "./Components/Navbar/Nav";
+import Home from "./Components/Home/Home";
+import Product from "./Components/Product/Product";
+import Cart from "./Components/Add_To_Cart/Cart";
+import { createContext, useState } from "react";
+import Pagenotfound from "./Components/PageNotFound/Pagenotfound";
+
+export const Context = createContext();
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Context.Provider value={{cart, setCart}}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<Pagenotfound/>} />
+        </Routes>
+      </Context.Provider>
     </div>
   );
 }

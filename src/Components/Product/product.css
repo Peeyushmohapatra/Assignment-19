@@ -1,0 +1,38 @@
+.product{
+    height: 93%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.card{
+    height: 350px;
+    width: 250px;
+    box-shadow: 0 0 10px lightblue;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card img{
+    height: 70%;
+    width: 100%;
+}
+
+.card button{
+    cursor: pointer;
+    border: none;
+    font-size: smaller;
+    height: 7%;
+    width: 70%;
+    border-radius: 20px;
+    background-color: white;
+    color: lightblue;
+    border: 2px solid lightblue;
+    font-weight: bolder;
+
+}
